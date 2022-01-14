@@ -1,0 +1,354 @@
+@mixin transition 
+    transition: all 300ms ease
+
+body
+    background-color: #F0F0F0
+    font-family: Montserrat
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: $Main_text
+
+a 
+    color: $Main_text
+    text-decoration: none
+
+ol, ul
+    padding: 0
+    margin: 0
+    list-style-position: inside
+button
+    font-family: Montserrat
+    background-color: transparent
+    border: 0
+    padding: 0
+    cursor: pointer
+main:after 
+    content: url(../img/back-green.png)
+    position: absolute
+    width: 770px
+    height: 705px
+    left: 0
+    top: 60px
+    z-index: -2
+h1
+    width: 730px
+    font-weight: 600
+    font-size: 48px
+    line-height: 115%
+    color: $Main_text
+    margin-top: 50px
+    margin-bottom: 65px
+h1:before 
+    position: absolute
+    top: 8px
+    left: 0
+    right: 0
+    text-align: center
+    white-space: nowrap
+    content: "SMART SREDA"
+    font-weight: 800
+    font-size: 180px
+    line-height: 115%
+    color: #FFFFFF
+    opacity: 0.3
+    z-index: -1
+.row .col 
+    position: relative
+.main-img
+    position: absolute
+    background-image: url(../img/main-img.png)
+    background-position: right
+    background-size: cover
+    background-repeat: no-repeat
+    width: 100%
+    min-height: 605px
+    right: 125px
+main
+    padding-bottom: 65px
+.main-img:before 
+    position: absolute
+    top: 40px
+    right: -40px
+    content: url(../img/list.png)
+.col-form 
+    width: 445px
+    min-height: 540px
+    background-color: #ffffff
+    padding: 0
+.head-form 
+    padding: 50px
+    padding-bottom: 0
+    display: flex
+    justify-content: space-between
+    margin-bottom: 24px
+
+.form-section
+    position: absolute
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.75s ease-in-out
+.form-section.current 
+    position: relative
+    visibility: visible
+    opacity: 1
+    transition: opacity 0.75s ease-in-out
+
+.form-section
+    padding: 0 50px
+#main-form 
+    display: flex
+    flex-direction: column
+    height: 100%
+.counter 
+    font-weight: normal
+    font-size: 12px
+    line-height: 100%
+.form-section
+    display: flex
+    flex-direction: column
+.step-1-head
+    font-weight: normal
+    font-size: 24px
+    line-height: 150%
+.form-section select,
+.select2
+    margin-top: 90px
+.form-navigation.previous 
+    font-weight: normal
+    font-size: 12px
+    line-height: 100%
+    text-align: right
+    text-decoration-line: underline
+    color: #4285F4
+button[type="submit"],
+.form-navigation.next
+    height: 95px
+    background: #FFDF43
+    box-shadow: 0px 4px 8px rgba(255, 223, 67, 0.25)
+    font-weight: 600
+    font-size: 24px
+    line-height: 100%
+    color: $Main_text
+    margin-top: auto
+button[type="submit"]:hover,
+.form-navigation.next:hover
+    background: #FFEE60
+
+.select2-search--dropdown
+    display: none
+.select2-container--default .select2-selection--single
+    height: 80px
+    display: flex
+    align-items: center
+    border: 1px solid #DADADA
+    border-radius: 0
+.select2-container .select2-selection--single .select2-selection__rendered
+    padding-left: 16px
+.select2-selection__rendered span,
+.select2-results__option span
+    display: block
+.select2-selection__rendered .time-head
+    font-size: 24px
+    line-height: 100%
+    color: $Main_green
+    margin-bottom: 8px
+.select2-selection__rendered .time-foot
+    font-size: 16px
+    line-height: 100%
+    color: #909090
+.select2-container--default .select2-selection--single .select2-selection__arrow 
+    width: 45px
+    height: 100%
+    background: #DADADA
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.10)
+.select2-container--default .select2-selection--single .select2-selection__arrow b
+    display: none
+.select2-selection__arrow:before
+    content: url(../img/arrow.png)
+    position: absolute
+    width: 32px
+    height: 32px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable,
+.select2-container--default .select2-results__option--selected
+    background-color: #F0F0F0
+.select2-dropdown 
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1)
+    border: 0
+    border-radius: 0
+.select2-results__option
+    height: 60px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-left: 16px
+.select2-results__option .time-head
+    font-size: 16px
+    line-height: 100%
+    color: $Main_text
+    margin-bottom: 8px
+.select2-results__option .time-foot
+    font-size: 14px
+    line-height: 100%
+    color: #909090
+
+
+.step-2-head 
+    font-size: 24px
+    line-height: 100%
+    color: $Main_green
+    margin-bottom: 8px
+.step-2-foot
+    font-size: 16px
+    line-height: 100%
+    color: #909090
+    margin-bottom: 24px
+.icon-title
+    font-size: 16px
+    line-height: 100%
+    color: $Main_text
+    margin-bottom: 16px
+
+.icon-wrap
+    display: flex
+    margin-bottom: 16px
+.icon-soc
+    position: relative
+    width: 48px
+    height: 48px
+    cursor: pointer
+    &::before
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &.icon-hidden
+        background-color: #DADADA
+        &:hover
+            background-color: #909090
+.icon-whatsapp
+    background-color: #45B058
+    margin-right: 16px
+    &::before
+        content: url(../img/whatsapp.png)
+        width: 32px
+        height: 32px
+.icon-email 
+    background-color: #4285F4
+    &::before
+        content: url(../img/email.png)
+        width: 32px
+        height: 26px
+
+label.input-hidden,
+input.input-hidden
+    display: none
+
+label
+    font-size: 14px
+    line-height: 17px
+    margin-bottom: 8px
+label span 
+    color: $Main_green
+input
+    height: 45px
+    border: 1px solid #DADADA
+    padding: 12px 16px
+input[name='name']
+    margin-bottom: 16px
+input::placeholder
+    font-size: 16px
+    line-height: 20px
+    color: #909090
+input:active,
+input:focus,
+input:hover 
+    border: 1px solid #45B058
+    outline: none
+
+.success-block
+    display: flex
+    flex-direction: column
+    height: 100%
+.success-block  .success-text
+    display: flex
+    flex-direction: column
+    padding: 50px
+    padding-bottom: 0 
+.success-block .step-1-head 
+    margin-bottom: 50px
+.success-block .icon-title
+    margin-bottom: 12px
+.number
+    font-weight: 600
+    font-size: 24px
+    line-height: 100%
+    margin-bottom: 32px
+
+.btn-color,
+.btn
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 70px
+    font-weight: 600
+    font-size: 24px
+    line-height: 100%
+    cursor: pointer
+    &:hover
+        background-color: #FFEE60
+        border: 2px solid #FFEE60
+.btn-color
+    margin-top: auto
+    background-color: #FFDF43
+    box-shadow: 0px 4px 8px rgba(255, 223, 67, 0.25)
+.btn
+    border: 2px solid #FFDF43
+    filter: drop-shadow(0px 4px 8px rgba(255, 223, 67, 0.25))
+
+
+footer
+    background-color: $Main_text
+.footer-top 
+    padding: 25px 0
+    color: #ffffff
+.mail-company
+    display: block
+    color: #ffffff
+    font-size: 20px
+    line-height: 125%
+    text-align: center
+    text-decoration-line: underline
+    &:hover
+        color: $Main_green
+        text-decoration-line: none
+.requisites span
+    display: block
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 8px
+.footer-bottom
+    font-size: 12px
+    line-height: 100%
+    color: #919191
+    padding: 16px 0
+    border-top: 1px #909090 solid
+.policy
+    font-size: 12px
+    line-height: 150%
+    text-decoration-line: underline
+    color: #919191
+    &:hover
+        color: #ffffff
+        text-decoration-line: none
+    &:nth-child(1)
+        margin-right: 24px
+        
+
+
+@media (min-width: 1400px)
+    .container 
+        max-width: 1140px
